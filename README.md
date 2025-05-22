@@ -1,35 +1,41 @@
-# 🔢 Advanced Number System Converter
+# 🔢 Numerical Analysis
 
-A powerful Python utility for converting numbers between different number systems, including support for fractional numbers and bases from 2 to 36.
+A comprehensive collection of Python implementations for various numerical analysis methods and algorithms.
 
 ## 📋 Table of Contents
 
 1. [Features](#-features)
 2. [Technology Stack](#-technology-stack)
 3. [Installation](#-installation)
-4. [Usage](#-usage)
-5. [Project Structure](#-project-structure)
-6. [Examples](#-examples)
-7. [Contributing](#-contributing)
-8. [Contact](#-contact)
+4. [Project Structure](#-project-structure)
+5. [Lab Implementations](#-lab-implementations)
+6. [Contributing](#-contributing)
+7. [Contact](#-contact)
 
 ---
 
 ## ✨ Features
 
-- **Multi-Base Support**: Convert numbers between any base from 2 to 36
-- **Fractional Numbers**: Handle decimal points and fractional parts
-- **High Precision**: Configurable precision for fractional conversions
-- **Case-Insensitive**: Accepts both uppercase and lowercase letters for bases > 10
-- **Input Validation**: Robust error handling for invalid inputs
-- **Comprehensive Testing**: Includes multiple example conversions
+- **Number System Conversion**: Convert numbers between different bases (2-36)
+- **Iterative Methods**: Implementation of Jacobi, Gauss-Seidel, and Relaxation methods
+- **Interpolation Methods**: 
+  - Lagrange Interpolation
+  - Newton's Forward/Backward Difference
+  - Newton's Divided Difference
+- **Regression Methods**: Linear and Power Fit Regression
+- **Numerical Differentiation**: Higher-order differentiation with Richardson Extrapolation
+- **Numerical Integration**: 
+  - Trapezoidal Rule
+  - Simpson's 1/3 Rule
+  - Simpson's 3/8 Rule
+  - Romberg Integration
 
 ---
 
 ## 🛠️ Technology Stack
 
 - **Python 3.x**: Core programming language
-- **Built-in Libraries**: No external dependencies required
+- **Built-in Libraries**: NumPy for numerical computations
 - **Type Hints**: Modern Python type annotations for better code clarity
 
 ---
@@ -43,41 +49,10 @@ git clone <your-repository-url>
 cd <repository-name>
 ```
 
-2. **No Additional Dependencies Required**
+2. **Install Dependencies**
 
-The project uses only Python standard library, so no additional installation is needed.
-
----
-
-## 🔍 Usage
-
-### Basic Usage
-
-```python
-from number_sys_conv import convert_base_fractional
-
-# Convert binary to decimal
-result = convert_base_fractional("101.101", 2, 10)
-print(result)  # Output: 5.625
-
-# Convert decimal to binary
-result = convert_base_fractional("0.5", 10, 2)
-print(result)  # Output: 0.1
-
-# Convert hexadecimal to decimal
-result = convert_base_fractional("1A.8", 16, 10)
-print(result)  # Output: 26.5
-```
-
-### Function Parameters
-
-```python
-convert_base_fractional(
-    number_str: str,    # Input number as string
-    from_base: int,     # Source base (2-36)
-    to_base: int,       # Target base (2-36)
-    precision: int = 10 # Precision for fractional part
-) -> str
+```bash
+pip install numpy
 ```
 
 ---
@@ -85,54 +60,90 @@ convert_base_fractional(
 ## 📁 Project Structure
 
 ```plaintext
-project/
+NA Lab/
 │
-├── number_sys_conv.py    # Main conversion module
-├── main-1.ipynb          # Jupyter notebook with examples
-└── README.md            # Project documentation
+├── number_sys_conversion/
+│   └── number_sys_conv.py
+│
+├── lab6/
+│   └── NA_Lab6.pdf
+│
+├── Iterative_mtds_for_Multivariate_eqns/
+│   ├── jacobi_iteration_mtd.py
+│   ├── gauss_seidel_mtd.py
+│   ├── mtd_of_relaxation.py
+│   └── NA_Lab7.pdf
+│
+├── Lagrange_interpolation_mtd/
+│   ├── lagrange_interpolation.py
+│   ├── newtons_divided_diff.py
+│   └── NA_Lab8.pdf
+│
+├── Netwon_interpolation_mtds_1/
+│   ├── newtons_fwd_diff.py
+│   ├── newtons_backwd_diff.py
+│   └── NA_Lab9.pdf
+│
+├── Newton_interpolation_mtds_2/
+│   ├── newton_fwd_backwd_interpolation.py
+│   └── NA_Lab10.pdf
+│
+├── Regression_mtds/
+│   ├── regression.py
+│   ├── powerfit_regression.py
+│   └── lab 11.pdf
+│
+├── Higher_order_differentiation/
+│   ├── higher_order_diff.py
+│   ├── richardson_extrapolation_Q1.py
+│   └── NA_Lab12.pdf
+│
+├── Integration_mtds/
+│   ├── trapezoidal_rule.py
+│   ├── simpson1-3_rule.py
+│   ├── simpson3-8_rule.py
+│   ├── romberg_trap.py
+│   └── NA_Lab13.pdf
+│
+├── Questions/
+│   └── [Lab Question PDFs]
+│
+└── README.md
 ```
 
 ---
 
-## 📝 Examples
+## 📝 Lab Implementations
 
-### 1. Binary to Decimal Conversion
-```python
-result = convert_base_fractional("101.101", 2, 10)
-# 101.101 (binary) = 5.625 (decimal)
-```
+### 1. Number System Conversion
+- Base conversion between 2-36
+- Support for fractional numbers
+- High precision calculations
 
-### 2. Decimal to Binary Conversion
-```python
-result = convert_base_fractional("0.5", 10, 2)
-# 0.5 (decimal) = 0.1 (binary)
-```
+### 2. Iterative Methods for Multivariate Equations
+- Jacobi Iteration Method
+- Gauss-Seidel Method
+- Method of Relaxation
 
-### 3. Hexadecimal to Decimal Conversion
-```python
-result = convert_base_fractional("1A.8", 16, 10)
-# 1A.8 (hex) = 26.5 (decimal)
-```
+### 3. Interpolation Methods
+- Lagrange Interpolation
+- Newton's Forward Difference
+- Newton's Backward Difference
+- Newton's Divided Difference
 
-### 4. Custom Precision
-```python
-result = convert_base_fractional("0.1", 10, 2, precision=20)
-# Converts with 20 decimal places of precision
-```
+### 4. Regression Methods
+- Linear Regression
+- Power Fit Regression
 
----
+### 5. Numerical Differentiation
+- Higher-order Differentiation
+- Richardson Extrapolation
 
-## 💡 Implementation Details
-
-The converter uses a two-step process:
-1. **To Decimal**: Converts the input number to decimal (base 10)
-2. **From Decimal**: Converts the decimal number to the target base
-
-### Key Features:
-- Handles both integer and fractional parts
-- Supports bases from 2 to 36 (using 0-9 and A-Z)
-- Configurable precision for fractional parts
-- Robust error handling for invalid inputs
+### 6. Numerical Integration
+- Trapezoidal Rule
+- Simpson's 1/3 Rule
+- Simpson's 3/8 Rule
+- Romberg Integration
 
 ---
 
@@ -151,9 +162,9 @@ Contributions are welcome! Please follow these steps:
 
 ## 📧 Contact
 
-[Your Name]  
-[Your GitHub Profile] | [Your Email]
+[Sri Sahithi Sunkaranam]  
+[https://github.com/sahithi-sss] | [ssrisahthis@gmail.com]
 
 ---
 
-> This project is designed for educational and practical purposes. It provides a robust solution for number system conversions with support for fractional numbers and various bases. 
+> This project is designed for educational purposes, implementing various numerical analysis methods and algorithms in Python. Each implementation includes detailed documentation and examples. 

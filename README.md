@@ -45,8 +45,8 @@ A comprehensive collection of Python implementations for various numerical analy
 1. **Clone the Repository**
 
 ```bash
-git clone <[Git Repo URL](https://github.com/sahithi-sss/Numerical-Optimization)>
-cd <Numerical-Optimization>
+git clone https://github.com/sahithi-sss/Numerical-Optimization
+cd Numerical-Optimization
 ```
 
 2. **Install Dependencies**
